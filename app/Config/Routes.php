@@ -11,3 +11,7 @@ $routes->post('login/autenticar', 'Login::autenticar');
 
 // 1. Ruta de respaldo para evitar el error 404 que tenías antes
 $routes->get('login/autenticar', 'Login::index');
+
+
+$routes->get('monitor', 'ServerMonitor::index');
+$routes->get('monitor/registrar', 'ServerMonitor::registrar');

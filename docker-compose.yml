@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  # Servidor PHP con Apache
+  # Servidor PHP con Apache (Capa 1)
   app:
     image: chialab/php:8.2-apache
     container_name: login_ci4_app
@@ -14,7 +14,7 @@ services:
       - APACHE_DOCUMENT_ROOT=/var/www/html/public
     command: /bin/sh -c "sed -ri -e 's!/var/www/html!$${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf && sed -ri -e 's!/var/www/!$${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf && apache2-foreground"
 
-  # Base de Datos MariaDB
+  # Base de Datos MariaDB (Local - Se mantiene para tus otros laboratorios)
   db:
     image: mariadb:10.6
     container_name: login_ci4_db
@@ -25,7 +25,7 @@ services:
     ports:
       - "3312:3306"
 
-  # phpMyAdmin propio para este proyecto
+  # phpMyAdmin propio para el MariaDB local
   phpmyadmin:
     image: phpmyadmin:latest
     container_name: login_ci4_phpmyadmin
