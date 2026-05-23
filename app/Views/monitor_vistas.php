@@ -9,15 +9,15 @@
     <div class="container mt-5">
         <div class="card shadow-sm mb-4">
             <div class="card-body text-center bg-dark text-white rounded-top">
-                <h2>📈 Monitor de Recursos del Sistema Operativo</h2>
-                <p class="mb-0 text-muted">Arquitectura Desacoplada: App Docker (Capa 1) ➡️ PostgreSQL Cloud Render (Capa 2)</p>
+                <h2> Monitor de Recursos del Sistema Operativo</h2>
+                <p class="mb-0 text-muted">Arquitectura Desacoplada: App Docker (Capa 1)  PostgreSQL Cloud Render (Capa 2)</p>
             </div>
         </div>
 
         <div class="row mb-4">
             <div class="col-md-12 text-center">
                 <a href="<?= base_url('monitor/registrar') ?>" class="btn btn-primary btn-lg shadow">
-                    🔄 Capturar y Registrar Métrica Actual del SO
+                     Capturar y Registrar Métrica Actual del SO
                 </a>
             </div>
         </div>
